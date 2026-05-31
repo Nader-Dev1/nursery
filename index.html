@@ -1,0 +1,217 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+.w{font-family:'Tajawal',sans-serif;direction:rtl;background:#FFF9F5;overflow:hidden}
+
+.hero{background:#1C1B3A;padding:2.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hc span{position:absolute;border-radius:50%;opacity:0.12}
+.c1{width:220px;height:220px;background:#FF8C61;top:-60px;right:-60px}
+.c2{width:160px;height:160px;background:#FFD97D;bottom:-40px;left:-40px}
+.c3{width:100px;height:100px;background:#A78BFA;top:40px;left:30px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,217,125,0.18);border:1px solid rgba(255,217,125,0.4);color:#FFD97D;font-size:11px;padding:4px 14px;border-radius:30px;margin-bottom:14px;position:relative;z-index:1;letter-spacing:.5px}
+.hero h1{font-size:30px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:10px;position:relative;z-index:1}
+.hero h1 em{color:#FF8C61;font-style:normal}
+.hero p{font-size:13px;color:rgba(255,255,255,0.7);max-width:290px;margin:0 auto 22px;line-height:1.7;position:relative;z-index:1}
+.stats{display:flex;justify-content:center;gap:2.5rem;position:relative;z-index:1}
+.sn{font-size:26px;font-weight:900;color:#FFD97D}
+.sl{font-size:11px;color:rgba(255,255,255,0.55);margin-top:2px}
+
+.sec{padding:1.6rem 1.2rem}
+.lbl{font-size:10px;font-weight:700;color:#FF8C61;letter-spacing:2px;margin-bottom:4px}
+.ttl{font-size:19px;font-weight:900;color:#1C1B3A;margin-bottom:1.2rem}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#fff;border-radius:20px;border:1px solid #F0E6DF;overflow:hidden;animation:up .5s ease both}
+.card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.1s}
+.card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.2s}
+.card:nth-child(5){animation-delay:.25s}.card:nth-child(6){animation-delay:.3s}
+.illo{width:100%;height:90px;display:block}
+.cb{padding:10px 12px 13px}
+.cn{font-size:13px;font-weight:700;color:#1C1B3A;margin-bottom:3px}
+.cd{font-size:11px;color:#999;line-height:1.5}
+
+.trust-band{margin:0 1.2rem;background:#1C1B3A;border-radius:20px;padding:1.2rem;display:flex;gap:14px;align-items:center}
+.trust-illo{flex-shrink:0;width:64px;height:64px;border-radius:14px;background:#2E2D52;display:flex;align-items:center;justify-content:center}
+
+.ages-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.ages-row::-webkit-scrollbar{display:none}
+.apill{flex-shrink:0;width:88px;background:#fff;border-radius:16px;border:1px solid #F0E6DF;overflow:hidden;text-align:center;animation:up .5s ease both}
+.apill-illo{width:100%;height:58px}
+.apill-n{font-size:15px;font-weight:900;color:#FF8C61;padding:6px 0 2px}
+.apill-l{font-size:10px;color:#aaa;padding-bottom:8px}
+
+.sched{margin:1.4rem 1.2rem;background:#fff;border-radius:20px;border:1px solid #F0E6DF;overflow:hidden}
+.sched-h{background:#FF8C61;padding:11px 16px}
+.sched-h p{font-size:14px;font-weight:700;color:#fff}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:.5px solid #F5EDE8}
+.row:last-child{border:none}
+.rl{font-size:13px;color:#666;display:flex;align-items:center;gap:7px}
+.rr{font-size:13px;font-weight:500;color:#1C1B3A}
+
+.cta{margin:0 1.2rem;background:#1C1B3A;border-radius:24px;padding:2rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.cta-c1{position:absolute;width:150px;height:150px;border-radius:50%;background:#FF8C61;opacity:.12;top:-50px;left:-30px}
+.cta-c2{position:absolute;width:100px;height:100px;border-radius:50%;background:#FFD97D;opacity:.1;bottom:-30px;right:-20px}
+.cta p{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:14px;position:relative;z-index:1}
+.cta-btn{display:inline-flex;align-items:center;gap:7px;background:#FF8C61;color:#fff;border:none;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;padding:12px 28px;border-radius:30px;cursor:pointer;position:relative;z-index:1;transition:transform .15s;text-decoration:none}
+.cta-btn:active{transform:scale(.96)}
+
+.footer{background:#13122E;padding:1.4rem 1.2rem 1rem;direction:rtl}
+.footer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.f-brand{font-size:15px;font-weight:900;color:#fff}
+.f-brand span{color:#FF8C61}
+.f-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+.f-links{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.f-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:12px;font-weight:500;padding:7px 14px;border-radius:20px;width:fit-content}
+.f-li{background:#0A66C2;color:#fff}
+.f-wa{background:#25D366;color:#fff}
+.f-divider{border:none;border-top:.5px solid rgba(255,255,255,.08);margin:10px 0}
+
+.beta-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.beta-badge{display:inline-flex;align-items:center;gap:5px;background:#FF8C61;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.5px}
+.beta-dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1.2s ease infinite}
+.beta-note{font-size:10px;color:rgba(255,255,255,.3)}
+
+.dev-credit{text-align:center;padding-top:4px}
+.dev-credit p{font-size:11px;color:rgba(255,255,255,.35);margin-bottom:6px}
+.dev-credit a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#7F77DD;font-size:11px;font-weight:500}
+
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+</style>
+
+<div class="w">
+
+<div class="hero">
+  <div class="hc"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
+  <div class="chip"><i class="ti ti-rosette" style="font-size:12px" aria-hidden="true"></i> معتمدة من وزارة التعليم</div>
+  <h1>حضانة <em>براعم</em><br>المستقبل</h1>
+  <p>بيئة آمنة ومحفّزة تنمّي مواهب طفلك منذ أولى خطواته</p>
+  <div class="stats">
+    <div><div class="sn">+150</div><div class="sl">طفل سعيد</div></div>
+    <div><div class="sn">15</div><div class="sl">سنة خبرة</div></div>
+    <div><div class="sn">20</div><div class="sl">معلمة متخصصة</div></div>
+  </div>
+</div>
+
+<svg viewBox="0 0 680 36" preserveAspectRatio="none" height="36" width="100%" xmlns="http://www.w3.org/2000/svg" style="background:#FFF9F5;display:block;margin-top:-1px">
+  <path d="M0,36 L0,18 Q170,0 340,18 Q510,36 680,18 L680,36Z" fill="#1C1B3A"/>
+  <path d="M0,36 L0,26 Q170,10 340,26 Q510,42 680,26 L680,36Z" fill="#FFF9F5"/>
+</svg>
+
+<div class="sec">
+  <div class="lbl">ما نقدمه</div>
+  <div class="ttl">خدماتنا المميزة</div>
+  <div class="grid">
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#FFF3EE"/><rect x="30" y="55" width="120" height="8" rx="4" fill="#FFD0BB"/><rect x="50" y="43" width="80" height="8" rx="4" fill="#FFB89A"/><rect x="40" y="31" width="100" height="8" rx="4" fill="#FF8C61"/><circle cx="90" cy="22" r="10" fill="#FF8C61"/><rect x="84" y="14" width="12" height="16" rx="2" fill="#fff" opacity=".4"/></svg>
+      <div class="cb"><div class="cn">التعليم المبكر</div><div class="cd">مناهج تفاعلية تنمّي المهارات اللغوية والذهنية</div></div>
+    </div>
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#FFF0F6"/><circle cx="55" cy="45" r="22" fill="#F4C0D1"/><circle cx="55" cy="45" r="14" fill="#D4537E"/><circle cx="55" cy="45" r="7" fill="#fff"/><rect x="85" y="28" width="60" height="8" rx="4" fill="#F4C0D1"/><rect x="85" y="42" width="45" height="8" rx="4" fill="#D4537E"/><rect x="85" y="56" width="52" height="8" rx="4" fill="#F4C0D1"/><circle cx="150" cy="25" r="6" fill="#FFD97D"/></svg>
+      <div class="cb"><div class="cn">الأنشطة الإبداعية</div><div class="cd">فن وموسيقى لتفجير طاقة الإبداع</div></div>
+    </div>
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#FFFBF0"/><ellipse cx="90" cy="62" rx="50" ry="12" fill="#FAC775"/><rect x="60" y="30" width="60" height="36" rx="10" fill="#EF9F27"/><rect x="68" y="22" width="44" height="14" rx="7" fill="#FAC775"/><circle cx="78" cy="48" r="5" fill="#fff" opacity=".5"/><circle cx="90" cy="48" r="5" fill="#fff" opacity=".5"/><circle cx="102" cy="48" r="5" fill="#fff" opacity=".5"/></svg>
+      <div class="cb"><div class="cn">وجبات صحية</div><div class="cd">3 وجبات يومياً معتمدة من أخصائية تغذية</div></div>
+    </div>
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#EEF9F4"/><circle cx="90" cy="42" r="28" fill="#9FE1CB"/><circle cx="90" cy="42" r="18" fill="#1D9E75"/><path d="M80,42 L87,50 L102,34" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="40" cy="28" r="8" fill="#9FE1CB"/><circle cx="140" cy="58" r="6" fill="#9FE1CB"/></svg>
+      <div class="cb"><div class="cn">الرعاية الصحية</div><div class="cd">ممرضة داخل الحضانة طوال اليوم</div></div>
+    </div>
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#F0EFFE"/><circle cx="70" cy="50" r="20" fill="#AFA9EC"/><circle cx="70" cy="50" r="12" fill="#534AB7"/><rect x="95" y="30" width="50" height="50" rx="12" fill="#AFA9EC"/><rect x="103" y="38" width="34" height="34" rx="8" fill="#534AB7"/><circle cx="120" cy="55" r="8" fill="#fff" opacity=".3"/></svg>
+      <div class="cb"><div class="cn">النشاط الحركي</div><div class="cd">ألعاب ورياضة تنمّي المهارات الجسدية</div></div>
+    </div>
+
+    <div class="card">
+      <svg class="illo" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="90" fill="#E8F4FC"/><rect x="55" y="25" width="70" height="50" rx="12" fill="#B5D4F4"/><rect x="63" y="33" width="54" height="34" rx="8" fill="#185FA5"/><circle cx="90" cy="50" r="10" fill="#fff" opacity=".25"/><path d="M85,50 L88,54 L96,45" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="35" cy="35" r="7" fill="#B5D4F4"/></svg>
+      <div class="cb"><div class="cn">الأمان والمراقبة</div><div class="cd">كاميرات 24/7 وتطبيق متابعة للأهل</div></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="trust-band">
+  <div class="trust-illo">
+    <svg viewBox="0 0 64 64" width="48" height="48" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="24" r="13" fill="#FF8C61"/><ellipse cx="32" cy="52" rx="20" ry="10" fill="#FF8C61"/><circle cx="32" cy="22" r="9" fill="#FFD0BB"/><ellipse cx="32" cy="50" rx="16" ry="8" fill="#FFD0BB"/></svg>
+  </div>
+  <div>
+    <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">فريق تربوي متخصص</p>
+    <p style="font-size:11px;color:rgba(255,255,255,.55);line-height:1.6">جميع معلماتنا بكالوريوس تربية وخبرة لا تقل عن 5 سنوات</p>
+  </div>
+</div>
+
+<div class="sec" style="padding-bottom:0">
+  <div class="lbl">نستقبل</div>
+  <div class="ttl" style="margin-bottom:1rem">الفئات العمرية</div>
+  <div class="ages-row">
+    <div class="apill"><svg class="apill-illo" viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="58" fill="#FFF3EE"/><circle cx="44" cy="26" r="14" fill="#FFD0BB"/><circle cx="44" cy="23" r="10" fill="#FF8C61" opacity=".7"/><ellipse cx="44" cy="50" rx="14" ry="7" fill="#FFD0BB"/></svg><div class="apill-n">3م+</div><div class="apill-l">رضّع</div></div>
+    <div class="apill"><svg class="apill-illo" viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="58" fill="#FFF0F6"/><circle cx="44" cy="22" r="12" fill="#F4C0D1"/><circle cx="44" cy="20" r="8" fill="#D4537E" opacity=".7"/><ellipse cx="44" cy="46" rx="13" ry="9" fill="#F4C0D1"/></svg><div class="apill-n">1–2</div><div class="apill-l">مشاة صغار</div></div>
+    <div class="apill"><svg class="apill-illo" viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="58" fill="#FFFBF0"/><circle cx="44" cy="20" r="11" fill="#FAC775"/><circle cx="44" cy="18" r="7" fill="#EF9F27" opacity=".7"/><rect x="34" y="30" width="20" height="20" rx="5" fill="#FAC775"/></svg><div class="apill-n">2–3</div><div class="apill-l">ما قبل KG</div></div>
+    <div class="apill"><svg class="apill-illo" viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="58" fill="#EEF9F4"/><circle cx="44" cy="19" r="11" fill="#9FE1CB"/><circle cx="44" cy="17" r="7" fill="#1D9E75" opacity=".7"/><rect x="33" y="29" width="22" height="22" rx="6" fill="#9FE1CB"/></svg><div class="apill-n">3–4</div><div class="apill-l">روضة أولى</div></div>
+    <div class="apill"><svg class="apill-illo" viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="58" fill="#F0EFFE"/><circle cx="44" cy="18" r="11" fill="#AFA9EC"/><circle cx="44" cy="16" r="7" fill="#534AB7" opacity=".7"/><rect x="32" y="28" width="24" height="24" rx="7" fill="#AFA9EC"/></svg><div class="apill-n">4–6</div><div class="apill-l">ما قبل المدرسة</div></div>
+  </div>
+</div>
+
+<div class="sched">
+  <div class="sched-h"><p><i class="ti ti-clock" style="font-size:14px;vertical-align:-2px;margin-left:6px" aria-hidden="true"></i>أوقات الدوام</p></div>
+  <div class="row"><span class="rl"><i class="ti ti-sun" style="color:#FF8C61;font-size:15px" aria-hidden="true"></i>يوم كامل</span><span class="rr">7:00 ص — 5:00 م</span></div>
+  <div class="row"><span class="rl"><i class="ti ti-sun-high" style="color:#EF9F27;font-size:15px" aria-hidden="true"></i>نصف يوم صباحي</span><span class="rr">7:00 ص — 12:00 م</span></div>
+  <div class="row"><span class="rl"><i class="ti ti-moon" style="color:#534AB7;font-size:15px" aria-hidden="true"></i>نصف يوم مسائي</span><span class="rr">1:00 م — 5:00 م</span></div>
+  <div class="row"><span class="rl"><i class="ti ti-calendar" style="color:#185FA5;font-size:15px" aria-hidden="true"></i>أيام الدوام</span><span class="rr">الأحد — الخميس</span></div>
+</div>
+
+<div class="sec" style="padding-top:0;padding-bottom:1.4rem">
+  <div class="cta">
+    <div class="cta-c1"></div><div class="cta-c2"></div>
+    <p>سجّلي طفلك الآن واحصلي على أسبوع تجريبي مجاني</p>
+    <a class="cta-btn" href="https://wa.me/966500000000" target="_blank">
+      <i class="ti ti-brand-whatsapp" style="font-size:18px" aria-hidden="true"></i>
+      تواصلي معنا عبر واتساب
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="f-brand">براعم <span>المستقبل</span></div>
+      <div class="f-sub">حضانة معتمدة — المملكة العربية السعودية</div>
+    </div>
+    <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="22" fill="#2E2D52"/><circle cx="22" cy="17" r="8" fill="#FF8C61"/><ellipse cx="22" cy="38" rx="13" ry="7" fill="#FF8C61"/><circle cx="22" cy="15" r="5" fill="#FFD0BB"/><ellipse cx="22" cy="36" rx="10" ry="5" fill="#FFD0BB"/></svg>
+  </div>
+
+  <div class="f-links">
+    <a class="f-link f-wa" href="https://wa.me/966500000000" target="_blank">
+      <i class="ti ti-brand-whatsapp" style="font-size:16px" aria-hidden="true"></i>
+      تواصل عبر واتساب
+    </a>
+    <a class="f-link f-li" href="https://www.linkedin.com/in/nader-elsayed-5658b3156/" target="_blank">
+      <i class="ti ti-brand-linkedin" style="font-size:16px" aria-hidden="true"></i>
+      Nader Elsayed — LinkedIn
+    </a>
+  </div>
+
+  <hr class="f-divider">
+
+  <div class="beta-row">
+    <div class="beta-badge"><div class="beta-dot"></div> نسخة تجريبية — Beta v0.1</div>
+    <span class="beta-note">جميع البيانات تجريبية</span>
+  </div>
+
+  <div class="dev-credit">
+    <p>تم التطوير بواسطة</p>
+    <a href="https://www.linkedin.com/in/nader-elsayed-5658b3156/" target="_blank">
+      <i class="ti ti-code" style="font-size:13px" aria-hidden="true"></i>
+      Nader Elsayed
+    </a>
+  </div>
+</div>
+
+</div>
